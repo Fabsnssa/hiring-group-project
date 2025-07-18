@@ -116,9 +116,10 @@ export default function CompanyDashboard() {
 
         {/* Main Content */}
         <Tabs defaultValue="jobs" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="jobs">Gestión de Ofertas</TabsTrigger>
             <TabsTrigger value="profile">Perfil de Empresa</TabsTrigger>
+            <TabsTrigger value="form">Ingreso de datos</TabsTrigger> {/*ejemplo para formmulario, sino lo hacemos como botón*/}
           </TabsList>
 
           <TabsContent value="jobs" className="space-y-6">
@@ -254,6 +255,36 @@ export default function CompanyDashboard() {
               </CardContent>
             </Card>
           </TabsContent>
+
+          <TabsContent value="form" className="space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Ingreso de Datos</CardTitle>
+                <CardDescription>Formulario personalizado para ingreso de información "CRUD"</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="extra-field1">Campo Extra 1</Label>
+                    <Input id="extra-field1" placeholder="Ej: Nombre del Proyecto" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="extra-field2">Campo Extra 2</Label>
+                    <Input id="extra-field2" placeholder="Ej: Responsable" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="details">Detalles Adicionales</Label>
+                  <Textarea id="details" placeholder="Descripción o notas relevantes..." rows={4} />
+                </div>
+                <div className="flex justify-end gap-2">
+                  <Button variant="outline">Cancelar</Button>
+                  <Button>Guardar Datos</Button>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          
         </Tabs>
       </div>
     </div>

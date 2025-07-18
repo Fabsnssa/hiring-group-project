@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Users, Building2, FileText, DollarSign, Filter, Plus, Eye, Edit, Trash2 } from "lucide-react"
+import { Label } from "@radix-ui/react-label"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function HiringGroupDashboard() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -104,12 +106,13 @@ export default function HiringGroupDashboard() {
 
         {/* Main Content */}
         <Tabs defaultValue="jobs" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-5">
+          <TabsList className="grid w-full grid-cols-6">
             <TabsTrigger value="jobs">Ofertas Laborales</TabsTrigger>
             <TabsTrigger value="companies">Empresas</TabsTrigger>
             <TabsTrigger value="applications">Postulaciones</TabsTrigger>
             <TabsTrigger value="payroll">Nómina</TabsTrigger>
             <TabsTrigger value="reports">Reportes</TabsTrigger>
+            <TabsTrigger value="form">Ingreso de datos</TabsTrigger>
           </TabsList>
 
           <TabsContent value="jobs" className="space-y-6">
@@ -238,6 +241,35 @@ export default function HiringGroupDashboard() {
                       </Button>
                     </CardContent>
                   </Card>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="form" className="space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Ingreso de Datos</CardTitle>
+                <CardDescription>Formulario personalizado para ingreso de información "CRUD"</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="extra-field1">Campo Extra 1</Label>
+                    <Input id="extra-field1" placeholder="Ej: Nombre del Proyecto" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="extra-field2">Campo Extra 2</Label>
+                    <Input id="extra-field2" placeholder="Ej: Responsable" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="details">Detalles Adicionales</Label>
+                  <Textarea id="details" placeholder="Descripción o notas relevantes..." rows={4} />
+                </div>
+                <div className="flex justify-end gap-2">
+                  <Button variant="outline">Cancelar</Button>
+                  <Button>Guardar Datos</Button>
                 </div>
               </CardContent>
             </Card>

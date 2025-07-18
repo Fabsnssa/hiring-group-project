@@ -15,6 +15,9 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Download, Eye, FileText, DollarSign, Building2, User } from "lucide-react"
+import { Label } from "@radix-ui/react-label"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function EmployeeDashboard() {
   const [selectedMonth, setSelectedMonth] = useState("")
@@ -178,9 +181,10 @@ export default function EmployeeDashboard() {
 
         {/* Main Content */}
         <Tabs defaultValue="payroll" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="payroll">Recibos de Pago</TabsTrigger>
             <TabsTrigger value="jobs">Ofertas Disponibles</TabsTrigger>
+            <TabsTrigger value="form">Ingreso de datos</TabsTrigger>
           </TabsList>
 
           <TabsContent value="payroll" className="space-y-6">
@@ -299,6 +303,35 @@ export default function EmployeeDashboard() {
                       </div>
                     </div>
                   ))}
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="form" className="space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Ingreso de Datos</CardTitle>
+                <CardDescription>Formulario personalizado para ingreso de información "CRUD"</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="extra-field1">Campo Extra 1</Label>
+                    <Input id="extra-field1" placeholder="Ej: Nombre del Proyecto" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="extra-field2">Campo Extra 2</Label>
+                    <Input id="extra-field2" placeholder="Ej: Responsable" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="details">Detalles Adicionales</Label>
+                  <Textarea id="details" placeholder="Descripción o notas relevantes..." rows={4} />
+                </div>
+                <div className="flex justify-end gap-2">
+                  <Button variant="outline">Cancelar</Button>
+                  <Button>Guardar Datos</Button>
                 </div>
               </CardContent>
             </Card>
