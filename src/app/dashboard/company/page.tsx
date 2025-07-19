@@ -16,7 +16,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Plus, Edit, Trash2, Eye, Users, FileText, Settings } from "lucide-react"
+import { Plus, Edit, Trash2, Pencil, Eye, Users, FileText, Settings } from "lucide-react"
+
 
 export default function CompanyDashboard() {
   const [jobs, setJobs] = useState([
@@ -286,6 +287,50 @@ export default function CompanyDashboard() {
           </TabsContent>
           
         </Tabs>
+
+        <div className="bg-white shadow-sm border-b p-3">
+          <div className="p-3">
+            <CardTitle>Listado General de registros</CardTitle>
+            <CardDescription>Información general de los usuarios</CardDescription>
+          </div>
+          <table className=" m-1 mb-3 rounded-md shadow-sm text-sm">
+            <thead className="bg-sky-100 border-b-2 border-gray-300 px-2 py-3">
+              <tr className="grid grid-cols-10 gap-4 px-2 py-3">
+                <th className="font-semibold text-center col-span-1">ID</th>
+                <th className="font-semibold text-center col-span-1">Empresa</th>
+                <th className="font-semibold text-center col-span-1">RIF</th>
+                <th className="font-semibold text-center col-span-1">Dirección</th>
+                <th className="font-semibold text-center col-span-1">Teléfono</th>
+                <th className="font-semibold text-center col-span-1">Sector</th>
+                <th className="font-semibold text-center col-span-1">Fecha del registro</th>
+                <th className="font-semibold text-center col-span-1">Status</th>
+                <th className="font-semibold text-center col-span-1">ID Sector</th>
+                <th className="font-semibold text-center col-span-1"></th>
+              </tr>
+            </thead>
+            <tbody className="bg-white">
+              <tr className="grid grid-cols-10 gap-4 border-b-2 border-gray-300 px-1 py-2 rounded-md">
+                <td className="text-center col-span-1">001</td>
+                <td className="text-center col-span-1">Empresa XYZ</td>
+                <td className="text-center col-span-1">J-12345678-9</td>
+                <td className="text-center col-span-1">Calle 123</td>
+                <td className="text-center col-span-1">0414-1234567</td>
+                <td className="text-center col-span-1">Tecnología</td>
+                <td className="text-center col-span-1">18/07/2025</td>
+                <td className="text-center col-span-1">Activo</td>
+                <td className="text-center col-span-1">12</td>
+                <td className="flex gap-2 px-1 py-1">
+                  <button className="bg-[#f83333] hover:bg-[#f54949] rounded-sm p-1 transition duration-200">
+                    <Pencil />
+                  </button>
+                  <button className="bg-[#34c274] hover:bg-[#42d685] rounded-sm p-1 transition duration-200">
+                    <Trash2 />
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   )
