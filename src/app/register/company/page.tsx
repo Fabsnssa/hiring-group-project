@@ -89,13 +89,13 @@ export default function CompanyRegister() {
             />
           </div>
 
-          <div className="bg-blue-50 p-4 rounded-lg">
+          {/* <div className="bg-blue-50 p-4 rounded-lg">
             <h4 className="font-semibold text-blue-900 mb-2">Información Importante</h4>
             <p className="text-sm text-blue-800">
               Una vez enviada tu solicitud, el equipo de Hiring Group revisará la información y te contactará para
               completar el proceso de registro. Recibirás las credenciales de acceso por correo electrónico.
             </p>
-          </div>
+          </div> */}
 
           <Button className="w-full">Enviar Solicitud de Registro</Button>
 

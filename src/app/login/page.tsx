@@ -53,11 +53,11 @@ export default function LoginPage() {
             Iniciar Sesión
           </Button>
 
-          <div className="text-center text-sm">
+          {/* <div className="text-center text-sm">
             <Link href="/forgot-password" className="text-blue-600 hover:underline">
               ¿Olvidaste tu contraseña?
             </Link>
-          </div>
+          </div> */}
 
           <div className="text-center text-sm">
             ¿No tienes cuenta?{" "}

@@ -321,10 +321,10 @@ export default function CompanyDashboard() {
                 <td className="text-center col-span-1">12</td>
                 <td className="flex gap-2 px-1 py-1">
                   <button className="bg-[#f83333] hover:bg-[#f54949] rounded-sm p-1 transition duration-200">
-                    <Pencil />
+                    <Pencil className="h-4 w-4 text-white" />
                   </button>
                   <button className="bg-[#34c274] hover:bg-[#42d685] rounded-sm p-1 transition duration-200">
-                    <Trash2 />
+                    <Trash2 className="h-4 w-4 text-white" />
                   </button>
                 </td>
               </tr>

@@ -162,7 +162,6 @@ export default function CandidateRegister() {
                 <Button className="flex-1">Completar Registro</Button>
               </div>
 
-              <p className="text-sm text-center text-gray-600">Podrás agregar más experiencias después del registro</p>
             </div>
           )}
 
